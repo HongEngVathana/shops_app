@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BloomShop | Checkout</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/cart.css">
+
+  <script src="../../assets/js/products.js" defer></script>
+  <script src="../../assets/js/checkout.js" defer></script>
+  <link rel="stylesheet" href="../../assets/css/checkout.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a class="bloom-shop" href="../shop/index.html">
+    BLOOM<span class="shop">SHOP</span>
+  </a>
+
+  <a class="contact-link" href="../contact/index.html">Contact</a>
+
+  <div class="search-wrap">
+    <i class="ri-search-line"></i>
+    <input id="navSearch" type="search" placeholder="Search products...">
+  </div>
+
+  <a href="index.html" class="cart-button" aria-label="Cart">
+    <i class="ri-shopping-cart-2-line"></i>
+    <span class="cart-count" id="cartCount">0</span>
+  </a>
+
+  <div class="account-links">
+    <a href="#signin">Sign In</a>
+    <a href="#signup" class="signup-button">Sign Up</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="page-heading">
+    <div>
+      <h1>Checkout</h1>
+      <p>Complete your order in a few steps</p>
+    </div>
+    <a href="../cart/index.html" class="continue">
+      <i class="ri-arrow-left-line"></i> Back to Cart
+    </a>
+  </div>
+
+  <div id="checkoutView" class="cart-layout">
+
+    <form class="card checkout-form" id="checkoutForm" novalidate>
+      <h3>Shipping Details</h3>
+
+      <div class="form-grid">
+        <label>Full name
+          <input type="text" id="fullName" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input type="email" id="email" autocomplete="email" required>
+        </label>
+        <label class="wide">Address
+          <input type="text" id="address" autocomplete="street-address" required>
+        </label>
+        <label>City
+          <input type="text" id="city" autocomplete="address-level2" required>
+        </label>
+        <label>ZIP / Postal code
+          <input type="text" id="zip" autocomplete="postal-code" required>
+        </label>
+      </div>
+
+      <h3>Payment</h3>
+      <div class="form-grid">
+        <label class="wide">Name on card
+          <input type="text" id="cardName" autocomplete="cc-name" required>
+        </label>
+        <label class="wide">Card number
+          <input type="text" id="cardNumber" inputmode="numeric" placeholder="1234 5678 9012 3456" autocomplete="cc-number" required>
+        </label>
+        <label>Expiry (MM/YY)
+          <input type="text" id="expiry" placeholder="MM/YY" autocomplete="cc-exp" required>
+        </label>
+        <label>CVC
+          <input type="text" id="cvc" inputmode="numeric" maxlength="4" autocomplete="cc-csc" required>
+        </label>
+      </div>
+
+      <p class="form-error" id="formError" role="alert"></p>
+      <p class="demo-note"><i class="ri-information-line"></i> Demo store: no real payment is processed.</p>
+
+      <button class="checkout" id="placeOrder" type="submit">
+        <i class="ri-lock-line"></i> Place Order
+      </button>
+    </form>
+
+    <aside class="card summary">
+      <h3>Order Summary</h3>
+      <div id="orderItems"></div>
+
+      <div class="summary-row">
+        <span id="subtotalLabel">Subtotal</span>
+        <strong id="subtotal">$0.00</strong>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span class="free">Free</span>
+      </div>
+      <div class="summary-row">
+        <span>Tax (8%)</span>
+        <strong id="tax">$0.00</strong>
+      </div>
+      <div class="summary-row summary-total">
+        <span>Total</span>
+        <strong id="total">$0.00</strong>
+      </div>
+    </aside>
+  </div>
+
+  <section class="card order-success" id="successView" hidden>
+    <i class="ri-checkbox-circle-fill"></i>
+    <h2>Thank you for your order!</h2>
+    <p>Your order <strong id="orderNumber"></strong> has been placed. A confirmation was sent to <span id="orderEmail"></span>.</p>
+    <a href="../shop/index.html" class="browse">Continue Shopping</a>
+  </section>
+
+  <section class="card order-success" id="emptyView" hidden>
+    <i class="ri-shopping-cart-line"></i>
+    <h2>Your cart is empty</h2>
+    <p>Add some sneakers before checking out.</p>
+    <a href="../shop/index.html" class="browse">Browse Products</a>
+  </section>
+
+</main>
+
+<footer>
+  <h2>Stay in the loop</h2>
+  <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+
+  <form class="newsletter" id="newsletter">
+    <input type="email" required placeholder="Enter your email">
+    <button type="submit" aria-label="Subscribe">
+      <i class="ri-arrow-right-line"></i>
+    </button>
+  </form>
+
+  <div class="footer-line"></div>
+
+  
+  <div class="main-container-link">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<a href="../shop/index.html" class="footer-logo">
+						BLOOM<span>SHOP</span>
+					</a>
+					<p class="brand-description">
+						Discover unique products that inspire your
+						lifestyle. Quality craftsmanship meets modern
+						design.
+					</p>
+					<div class="footer-contact">
+						<p>
+							<i class="ri-map-pin-line"></i>
+							123 Fashion Street, Style City, SC 12345
+						</p>
+						<p>
+							<i class="ri-phone-line"></i>
+							+1 (555) 123-4567
+						</p>
+						<p>
+							<i class="ri-mail-line"></i>
+							hello@bloomshop.com
+						</p>
+					</div>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook">
+							<i class="ri-facebook-line"></i>
+						</a>
+						<a href="#" aria-label="Twitter">
+							<i class="ri-twitter-line"></i>
+						</a>
+						<a href="#" aria-label="Instagram">
+							<i class="ri-instagram-line"></i>
+						</a>
+						<a href="#" aria-label="Github">
+							<i class="ri-github-line"></i>
+						</a>
+					</div>
+				</div>
+			
+				<div class="footer-column">
+					<h3>SHOP</h3>
+					<a href="../shop/index.html">All Products</a>
+					<a href="../shop/index.html">New Arrivals</a>
+					<a href="../shop/index.html">Sale</a>
+					<a href="../shop/index.html">Featured</a>
+				</div>
+			
+				<div class="footer-column">
+					<h3>CUSTOMER CARE</h3>
+					<a href="#contact">Contact Us</a>
+					<a href="#">Help Center</a>
+					<a href="#">Shipping Info</a>
+					<a href="#">Returns & Exchanges</a>
+				</div>
+			
+				<div class="footer-column">
+					<h3>COMPANY</h3>
+					<a href="#">About Us</a>
+					<a href="#">Careers</a>
+					<a href="#">Blog</a>
+					<a href="#">Press</a>
+				</div>
+			
+				<div class="footer-column">
+					<h3>LEGAL</h3>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms & Conditions</a>
+					<a href="#">Cookie Policy</a>
+					<a href="#">Accessibility</a>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<p>© 2026 BloomShop. All rights reserved.</p>
+				<div>
+					<span>Designed with</span>
+					<i class="ri-heart-fill"></i>
+					<span>by BloomShop</span>
+				</div>
+			</div>
+		</div>
+</footer>
+
+</body>
+</html>

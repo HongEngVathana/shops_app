@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BloomShop | Step Into Style</title>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/css/shop.css">
+	
+</head>
+
+<body>
+
+	<header class="navbar">
+		<a class="bloom-shop" href="../shop/index.html">
+			BLOOM<span class="shop">SHOP</span>
+		</a>
+		<a class="contact-link" href="../contact/index.html">Contact</a>
+		<div class="search-wrap">
+			<span class="search-icon">
+				<i class="ri-search-line"></i>
+			</span>
+			<input id="searchInput" type="search"placeholder="Search products..." autocomplete="off">
+			<button class="clear-search" id="clearSearch" type="button">x</button>
+			<div class="search-suggestions" id="searchSuggestions"></div>
+		</div>
+		<a href="../cart/index.html" class="cart-button">
+			<i class="ri-shopping-cart-2-line"></i>
+			<span class="cart-count" id="cartCount">0</span>
+		</a>
+		<div class="account-links">
+			<a href="#signin">Sign In</a>
+			<a class="signup-button" href="#signup">Sign Up</a>
+		</div>
+	</header>
+
+	<main>
+		<section class="intro">
+			<h1>Step Into Style</h1>
+			<p>
+				Discover our latest collection of premium sneakers.<br>
+				Comfort, design, and performance in every step.
+			</p>
+		</section>
+
+		<section class="catalog">
+			<div class="catalog-toolbar">
+				<p id="resultCount">Showing products</p>
+				<div class="toolbar-actions">
+					<label class="sort-label" for="sortSelect">Sort by</label>
+					<select id="sortSelect" class="sort-select">
+						<option value="default">Featured</option>
+						<option value="price-asc">Price: Low to High</option>
+						<option value="price-desc">Price: High to Low</option>
+						<option value="rating">Top Rated</option>
+						<option value="name">Name A–Z</option>
+					</select>
+					<button id="resetSearch" type="button">Clear search</button>
+				</div>
+			</div>
+			<div class="product-grid" id="productGrid"></div>
+			<p class="empty-state" id="emptyState" hidden>
+				No products found. Try another search.
+			</p>
+		</section>
+	</main>
+
+
+	<footer class="footer" id="contact">
+
+		<div class="main-input">
+			<section class="newsletter-section">
+				<h2>Stay in the loop</h2>
+				<p>
+					Subscribe to our newsletter for exclusive offers, new arrivals, and style inspiration.
+				</p>
+				<form class="newsletter-form" id="newsletter">
+					<input type="email" placeholder="Enter your email" required >
+					<button type="submit" aria-label="Subscribe">
+						<i class="ri-arrow-right-line"></i>
+					</button>
+				</form>
+			</section>
+		</div>
+
+		<div class="main-container-link">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<a href="../shop/index.html" class="footer-logo">
+						BLOOM<span>SHOP</span>
+					</a>
+					<p class="brand-description">
+						Discover unique products that inspire your
+						lifestyle. Quality craftsmanship meets modern
+						design.
+					</p>
+					<div class="footer-contact">
+						<p>
+							<i class="ri-map-pin-line"></i>
+							123 Fashion Street, Style City, SC 12345
+						</p>
+						<p>
+							<i class="ri-phone-line"></i>
+							+1 (555) 123-4567
+						</p>
+						<p>
+							<i class="ri-mail-line"></i>
+							hello@bloomshop.com
+						</p>
+					</div>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook">
+							<i class="ri-facebook-line"></i>
+						</a>
+						<a href="#" aria-label="Twitter">
+							<i class="ri-twitter-line"></i>
+						</a>
+						<a href="#" aria-label="Instagram">
+							<i class="ri-instagram-line"></i>
+						</a>
+						<a href="#" aria-label="Github">
+							<i class="ri-github-line"></i>
+						</a>
+					</div>
+				</div>
+			
+				<div class="footer-column">
+					<h3>SHOP</h3>
+					<a href="../shop/index.html">All Products</a>
+					<a href="../shop/index.html">New Arrivals</a>
+					<a href="../shop/index.html">Sale</a>
+					<a href="../shop/index.html">Featured</a>
+				</div>
+			
+				<div class="footer-column">
+					<h3>CUSTOMER CARE</h3>
+					<a href="#contact">Contact Us</a>
+					<a href="#">Help Center</a>
+					<a href="#">Shipping Info</a>
+					<a href="#">Returns & Exchanges</a>
+				</div>
+			
+				<div class="footer-column">
+					<h3>COMPANY</h3>
+					<a href="#">About Us</a>
+					<a href="#">Careers</a>
+					<a href="#">Blog</a>
+					<a href="#">Press</a>
+				</div>
+			
+				<div class="footer-column">
+					<h3>LEGAL</h3>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms & Conditions</a>
+					<a href="#">Cookie Policy</a>
+					<a href="#">Accessibility</a>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<p>© 2026 BloomShop. All rights reserved.</p>
+				<div>
+					<span>Designed with</span>
+					<i class="ri-heart-fill"></i>
+					<span>by BloomShop</span>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<script src="../../assets/js/products.js" defer></script>
+	<script src="../../assets/js/shop.js" defer></script>
+</body>
+</html>

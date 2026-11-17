@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../assets/css/contact.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+		<div class="container">
+			<a class="navbar-brand bloom-logo" href="../shop/index.html">
+				BLOOM<span>SHOP</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mainNavbar">
+				<ul class="navbar-nav ms-lg-5 me-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Contact</a>
+					</li>
+				</ul>
+				<form class="search-form d-flex mx-lg-auto my-3 my-lg-0">
+					<i class="ri-search-line"></i>
+					<input type="search" placeholder="Search products...">
+				</form>
+				<div class="navbar-actions d-flex align-items-center gap-3 ms-lg-4">
+					<a href="../cart/index.html" class="cart-link">
+						<i class="ri-shopping-cart-2-line"></i>
+						<span class="cart-count">0</span>
+					</a>
+					<a href="#signin" class="sign-in">Sign In</a>
+					<a href="#signup" class="btn signup-btn">Sign Up</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section class="contact-hero">
+		<div class="container text-center">
+			<span class="hero-badge">Get in Touch</span>
+			<h1>We'd love to <span>hear from you</span></h1>
+			<p>
+				Have a question, suggestion, or just want to say hello?We're here to help and would love to hear from you.
+			</p>
+		</div>
+	</section>
+
+	<section class="contact-section py-5">
+		<div class="container">
+			<div class="row g-4 justify-content-center">
+				<div class="col-lg-7">
+					<div class="custom-card contact-form-card h-100">
+						<h2 class="section-title">Send us a message</h2>
+						<p class="section-description">
+							Fill out the form below and we'll get back to you as soon as possible.
+						</p>
+						<form id="contactForm">
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label for="name" class="form-label">Your Name</label>
+									<input type="text" class="form-control" id="name" placeholder="John Doe" required >
+								</div>
+								<div class="col-md-6 mb-3">
+									<label for="email" class="form-label">Your Email</label>
+									<input type="email" class="form-control" id="email" placeholder="john@example.com" required >
+								</div>
+							</div>
+							<div class="mb-3">
+								<label for="subject" class="form-label">Subject</label>
+								<input type="text" class="form-control" id="subject" placeholder="How can we help you?" required >
+							</div>
+							<div class="mb-3">
+								<label for="message" class="form-label">Your Message</label>
+								<textarea class="form-control message-input" id="message" rows="5" placeholder="Tell us more about your question or concern..." required></textarea>
+							</div>
+							<button type="submit" class="btn orange-btn">
+								<i class="ri-send-plane-line me-1"></i>
+								Send Message
+							</button>
+							<div id="formStatus" class="mt-3" aria-live="polite"></div>
+						</form>
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<div class="custom-card information-card h-100">
+						<h2 class="section-title mb-4">Contact Information</h2>
+						<div class="contact-info-item">
+							<div class="info-icon">
+								<i class="ri-mail-line"></i>
+							</div>
+							<div>
+								<h3>Email Us</h3>
+								<p>hello@bloomshop.com</p>
+								<p>support@bloomshop.com</p>
+								<small>Send us an email anytime</small>
+							</div>
+						</div>
+						<div class="contact-info-item">
+							<div class="info-icon">
+								<i class="ri-phone-line"></i>
+							</div>
+							<div>
+								<h3>Call Us</h3>
+								<p>+1 (555) 123-4567</p>
+								<p>+1 (555) 987-6543</p>
+								<small>Mon-Fri from 8am to 5pm</small>
+							</div>
+						</div>
+						<div class="contact-info-item">
+							<div class="info-icon">
+								<i class="ri-map-pin-line"></i>
+							</div>
+							<div>
+								<h3>Visit Us</h3>
+								<p>123 Fashion Street</p>
+								<p>Style City, SC 12345</p>
+								<small>Come say hello at our office</small>
+							</div>
+						</div>
+						<div class="contact-info-item mb-0">
+							<div class="info-icon">
+								<i class="ri-time-line"></i>
+							</div>
+							<div>
+								<h3>Working Hours</h3>
+								<p>Monday - Friday: 9am - 6pm</p>
+								<p>Saturday: 10am - 4pm</p>
+								<small>Sunday: Closed</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="custom-card why-card">
+						<h2 class="section-title mb-3">Why Contact Us?</h2>
+						<div class="why-item">
+							<i class="ri-customer-service-2-line"></i>
+							<div>
+								<h3>24/7 Support</h3>
+								<p>Get help whenever you need it</p>
+							</div>
+						</div>
+						<div class="why-item">
+							<i class="ri-message-2-line"></i>
+							<div>
+								<h3>Quick Response</h3>
+								<p>We reply within 2 hours</p>
+							</div>
+						</div>
+						<div class="why-item border-0 pb-0">
+							<i class="ri-shield-check-line"></i>
+							<div>
+								<h3>Secure & Private</h3>
+								<p>Your information is safe with us</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="faq-section py-5">
+		<div class="container">
+			<div class="text-center mb-5">
+				<span class="hero-badge">FAQ</span>
+				<h2 class="faq-heading">Frequently Asked Questions</h2>
+				<p class="section-description">
+					Find quick answers to common questions about our products and services.
+				</p>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-9">
+					<div class="row g-4">
+
+						<div class="col-md-6">
+							<div class="faq-card">
+								<h3 class="faq-question">What are your shipping policies?</h3>
+								<p class="faq-answer">
+									We offer free shipping on orders over $50. Standard shipping takes 3-5 business days.
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="faq-card">
+								<h3 class="faq-question">How can I track my order?</h3>
+								<p class="faq-answer">
+									Once your order ships, you'll receive a tracking number via email to monitor your package.
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="faq-card">
+								<h3 class="faq-question">What is your return policy?</h3>
+								<p class="faq-answer">
+									We accept returns within 30 days of purchase. Items must be in original condition.
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="faq-card">
+								<h3 class="faq-question">Do you offer international shipping?</h3>
+								<p class="faq-answer">
+									Yes, we ship worldwide. International shipping rates vary by destination.
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="help-section py-5">
+		<div class="container text-center">
+			<h2>Still have questions?</h2>
+			<p>
+				Can't find what you're looking for? Our customer support team is here to help.
+			</p>
+			<div class="d-flex justify-content-center gap-3 flex-wrap">
+				<a href="tel:+15551234567" class="btn orange-btn">
+					<i class="ri-phone-line me-1"></i>
+					Call Us Now
+				</a>
+				<a href="mailto:hello@bloomshop.com" class="btn outline-btn">
+					<i class="ri-message-3-line me-1"></i>
+					Email Us
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="newsletter-section py-5">
+		<div class="container text-center">
+			<h2>Stay in the loop</h2>
+			<p>
+				Subscribe to our newsletter for exclusive offers,
+				new arrivals, and style inspiration.
+			</p>
+			<form id="newsletterForm" class="newsletter-form mx-auto">
+				<input type="email" class="form-control" placeholder="Enter your email" required >
+				<button type="submit" class="btn orange-btn">
+					<i class="ri-arrow-right-line"></i>
+				</button>
+			</form>
+			<p id="newsletterStatus" class="mt-3" aria-live="polite"></p>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row g-4 py-5">
+				<div class="col-lg-4 col-md-6">
+					<a href="../shop/index.html" class="footer-logo">
+						BLOOM<span>SHOP</span>
+					</a>
+					<p class="footer-description">
+						Discover unique products that inspire your lifestyle.Quality craftsmanship meets modern design.
+					</p>
+					<p class="footer-contact">
+						<i class="ri-map-pin-line"></i>
+						123 Fashion Street, Style City, SC 12345
+					</p>
+					<p class="footer-contact">
+						<i class="ri-phone-line"></i>
+						+1 (555) 123-4567
+					</p>
+					<p class="footer-contact">
+						<i class="ri-mail-line"></i>
+						hello@bloomshop.com
+					</p>
+					<div class="social-links mt-4">
+						<a href="#" aria-label="Facebook"><i class="ri-facebook-line"></i></a>
+						<a href="#" aria-label="Twitter"><i class="ri-twitter-line"></i></a>
+						<a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+						<a href="#" aria-label="Github"><i class="ri-github-line"></i></a>
+					</div>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3">
+					<h3>SHOP</h3>
+					<a href="../shop/index.html">All Products</a>
+					<a href="../shop/index.html">New Arrivals</a>
+					<a href="../shop/index.html">Sale</a>
+					<a href="../shop/index.html">Featured</a>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3">
+					<h3>CUSTOMER CARE</h3>
+					<a href="index.html">Contact Us</a>
+					<a href="#">Help Center</a>
+					<a href="#">Shipping Info</a>
+					<a href="#">Returns & Exchanges</a>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3">
+					<h3>COMPANY</h3>
+					<a href="#">About Us</a>
+					<a href="#">Careers</a>
+					<a href="#">Blog</a>
+					<a href="#">Press</a>
+				</div>
+				<div class="col-6 col-lg-2 col-md-3">
+					<h3>LEGAL</h3>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms & Conditions</a>
+					<a href="#">Cookie Policy</a>
+					<a href="#">Accessibility</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>© 2026 BloomShop. All rights reserved.</p>
+				<p>Made with <i class="ri-heart-fill"></i> by BloomShop</p>
+			</div>
+		</div>
+	</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/contact.js"></script>
+</body>
+</html>
